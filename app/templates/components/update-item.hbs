@@ -4,22 +4,29 @@
     <form>
       <div class="form-group">
         <label for="name">Name</label>
-        {{input value=name id="name" placeholder=item.name}}
+        {{input value=item.name id="name" placeholder=item.name}}
       </div>
 
       <div class="form-group">
         <label for="quantity">Quantity</label>
-        {{input value=quantity id="quantity" placeholder=item.quantity}}
+        {{input value=item.quantity id="quantity" placeholder=item.quantity}}
       </div>
 
       <div class="form-group">
         <label for="notes">Notes</label>
-        {{textarea value=notes id="notes" placeholder=item.notes}}
+        {{textarea value=item.notes id="notes" placeholder=item.notes}}
       </div>
 
-      <button {{action 'update' item}}>Save</button>
+      <button {{action 'update' item}}>Update</button>
     </form>
   </div>
 {{else}}
   <button {{action 'updateItemForm'}}>Update</button>
+  <div class="form-group">
+    {{#x-select value=category}}
+    {{#x-option value='grocery'}}<span>Add to Grocery List</span>{{/x-option}}
+    {{#x-option value='pantry'}}<span>Add to Pantry List</span>{{/x-option}}
+    {{/x-select}}
+  </div>
+<button {{action 'sendTo' item}}>Submit</button>
   {{/if}}

@@ -1,4 +1,6 @@
-Grocery
+<h1>Grocery List</h1>
 {{#each model as |item|}}
-{{item-tile item=item}}
+<hr>
+<h3>{{item.name}}</h3> x {{item.quantity}}<br>
+<h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
 {{/each}}
