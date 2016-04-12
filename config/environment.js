@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'fridg2-ember',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
+    firebase: 'https://fridg2.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
