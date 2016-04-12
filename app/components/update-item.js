@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         date: this.get('date'),
       };
       this.set('updateItemForm', false);
-      this.sendAction('update', rental, params);
+      this.sendAction('update', item, params);
     }
   }
 });
