@@ -1,2 +1,4 @@
 Grocery
-{{item.name}}
+{{#each model as |item|}}
+{{item-tile item=item}}
+{{/each}}
