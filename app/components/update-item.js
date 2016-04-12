@@ -17,11 +17,11 @@ export default Ember.Component.extend({
       this.set('updateItemForm', false);
       this.sendAction('update', item, params);
     },
-    sendToGrocery(item) {
+    sendTo(item) {
       var params = {
         category: this.get('category')
       };
-      this.sendAction('sendToGrocery', item, params);
+      this.sendAction('sendTo', item, params);
     },
   }
 });

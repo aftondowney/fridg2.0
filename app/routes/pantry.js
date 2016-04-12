@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    sendToGrocery(item, params) {
+    sendTo(item, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key] !==undefined && params[key] !=="") {
           item.set(key, params[key]);
