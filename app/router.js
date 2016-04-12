@@ -6,6 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('results', {path: '/results/:food'});
   this.route('grocery');
   this.route('pantry');
 });
