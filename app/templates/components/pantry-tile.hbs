@@ -1,7 +1,3 @@
-Pantry
-{{#each model as |item|}}
 <h3>{{item.name}}</h3> x {{item.quantity}}<br>
 <h4>Bought on:</h4>{{date-color item}}{{item.date}} ({{moment-from-now item.date 'MMMM Do YYYY, h:mm a' id='buyDate'}})<br>
 <h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
-
-{{/each}}

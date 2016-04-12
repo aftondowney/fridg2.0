@@ -8,8 +8,8 @@ export default Ember.Route.extend({
     });
   },
 
-  // sortBy: ['date:desc'],
-  // sortedItems: Ember.computed.sort('items', 'sortBy'), DOESN'T WORK
+  sortBy: ['date:desc'],
+  sortedItems: Ember.computed.sort('item', 'sortBy'),
 
   actions: {
     sendTo(item, params) {
