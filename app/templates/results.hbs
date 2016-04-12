@@ -1,3 +1,5 @@
 <ul>
-    <li> {{list.item.name}}</li>
+  {{#each model as |food|}}
+    <li> {{food.name}}</li>
+  {{/each}}
 </ul>
