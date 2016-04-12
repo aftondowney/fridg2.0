@@ -17,10 +17,16 @@
         {{textarea value=item.notes id="notes" placeholder=item.notes}}
       </div>
 
-      <button {{action 'update' item}}>Save</button>
+      <button {{action 'update' item}}>Update</button>
     </form>
   </div>
 {{else}}
   <button {{action 'updateItemForm'}}>Update</button>
-  <button class='btn btn-sm btn-success'{{action 'sendToGrocery' item}}>Are you out of this?</button>
+  <div class="form-group">
+    {{#x-select value=category}}
+    {{#x-option value='grocery'}}<span>Add to Grocery List</span>{{/x-option}}
+    {{#x-option value='pantry'}}<span>Add to Pantry List</span>{{/x-option}}
+    {{/x-select}}
+  </div>
+<button {{action 'sendToGrocery' item}}>Submit</button>
   {{/if}}

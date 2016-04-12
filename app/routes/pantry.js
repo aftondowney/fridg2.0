@@ -8,12 +8,15 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    sendToGrocery(item) {
-      debugger;
+    sendToGrocery(item, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !==undefined && params[key] !=="") {
+          item.set(key, params[key]);
+        }
+      });
       item.save();
-      this.transitionTo("pantry");
+      this.transitionTo('pantry');
     },
-
     update(item, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key] !==undefined && params[key] !=="") {

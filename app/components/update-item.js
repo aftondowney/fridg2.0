@@ -12,16 +12,16 @@ export default Ember.Component.extend({
         quantity: this.get('city'),
         notes: this.get('notes'),
         date: this.get('date'),
+        category: this.get('category')
       };
-      debugger;
       this.set('updateItemForm', false);
       this.sendAction('update', item, params);
     },
     sendToGrocery(item) {
       var params = {
-        category: this.set('pantry'),
+        category: this.get('category')
       };
       this.sendAction('sendToGrocery', item, params);
-    }
+    },
   }
 });
