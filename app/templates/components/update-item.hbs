@@ -1,1 +1,25 @@
-{{yield}}
+{{#if updateItemForm}}
+  <h4>Update {{item.name}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name" placeholder=item.name}}
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        {{input value=quantity id="quantity" placeholder=item.quantity}}
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        {{textarea value=notes id="notes" placeholder=item.notes}}
+      </div>
+
+      <button {{action 'update' item}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updateItemForm'}}>Update</button>
+  {{/if}}
