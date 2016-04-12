@@ -1,6 +1,6 @@
 <h1>Grocery List</h1>
 {{#each model as |item|}}
 <hr>
-{{item-tile item=item}}
-{{update-item item=item update='update' sendTo='sendTo'}}
+<h3>{{item.name}}</h3> x {{item.quantity}}<br>
+<h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
 {{/each}}
