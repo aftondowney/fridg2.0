@@ -13,8 +13,15 @@ export default Ember.Component.extend({
         notes: this.get('notes'),
         date: this.get('date'),
       };
+      debugger;
       this.set('updateItemForm', false);
       this.sendAction('update', item, params);
+    },
+    sendToGrocery(item) {
+      var params = {
+        category: this.set('pantry'),
+      };
+      this.sendAction('sendToGrocery', item, params);
     }
   }
 });

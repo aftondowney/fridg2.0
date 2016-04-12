@@ -6,5 +6,16 @@ export default Ember.Route.extend({
       orderBy: 'category',
       equalTo: 'grocery'
     });
+  },
+  actions: {
+    update(item, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !==undefined && params[key] !=="") {
+          item.set(key, params[key]);
+        }
+      });
+      item.save();
+      this.transitionTo('grocery');
+    },
   }
 });

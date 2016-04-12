@@ -4,17 +4,17 @@
     <form>
       <div class="form-group">
         <label for="name">Name</label>
-        {{input value=name id="name" placeholder=item.name}}
+        {{input value=item.name id="name" placeholder=item.name}}
       </div>
 
       <div class="form-group">
         <label for="quantity">Quantity</label>
-        {{input value=quantity id="quantity" placeholder=item.quantity}}
+        {{input value=item.quantity id="quantity" placeholder=item.quantity}}
       </div>
 
       <div class="form-group">
         <label for="notes">Notes</label>
-        {{textarea value=notes id="notes" placeholder=item.notes}}
+        {{textarea value=item.notes id="notes" placeholder=item.notes}}
       </div>
 
       <button {{action 'update' item}}>Save</button>
@@ -22,4 +22,5 @@
   </div>
 {{else}}
   <button {{action 'updateItemForm'}}>Update</button>
+  <button class='btn btn-sm btn-success'{{action 'sendToGrocery' item}}>Are you out of this?</button>
   {{/if}}

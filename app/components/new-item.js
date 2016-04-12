@@ -31,6 +31,5 @@ export default Ember.Component.extend({
     };
     this.set('newItem', false);
     this.sendAction('savePantry', params);
-    console.log(item.category);
   }
 });
