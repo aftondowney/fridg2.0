@@ -7,6 +7,10 @@ export default Ember.Route.extend({
       equalTo: 'pantry'
     });
   },
+
+  // sortBy: ['date:desc'],
+  // sortedItems: Ember.computed.sort('items', 'sortBy'), DOESN'T WORK
+
   actions: {
     sendTo(item, params) {
       Object.keys(params).forEach(function(key) {

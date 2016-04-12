@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export default Ember.Component.extend({
   updateItemForm: false,
@@ -19,6 +20,7 @@ export default Ember.Component.extend({
     },
     sendTo(item) {
       var params = {
+        date: this.get('date')? this.get('date') : moment().format('MMMM Do YYYY, hh:mm a'),
         category: this.get('category')
       };
       this.sendAction('sendTo', item, params);

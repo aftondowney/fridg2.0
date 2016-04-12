@@ -12,7 +12,7 @@ export default Ember.Component.extend({
     saveGrocery() {
       var params = {
         name: this.get('name'),
-        date: this.get('date') ? this.get('date') : moment().format('MMMM Do YYYY, h:mm'),
+        date: this.get('date') ? this.get('date') : moment().format('MMMM Do YYYY'),
         quantity: this.get('quantity'),
         notes: this.get('notes'),
         category: this.get('category'),
