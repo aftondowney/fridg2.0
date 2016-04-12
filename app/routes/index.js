@@ -7,15 +7,10 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    saveGrocery(params) {
+    save(params) {
       var newItem = this.store.createRecord('item', params);
       newItem.save();
       this.transitionTo('index');
     },
-    savePantry(params) {
-      var newItem = this.store.createRecord('item', params);
-      newItem.save();
-      this.transitionTo('index');
-    },
-  }
+}
 });
