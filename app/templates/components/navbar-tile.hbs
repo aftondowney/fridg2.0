@@ -11,6 +11,11 @@
       <ul class="nav navbar-nav navbar-right">
         {{#link-to 'grocery' tagName="li"}}<button class="btn btn-default navbar-btn grocery-link">Grocery List<span class="glyphicon glyphicon-shopping-cart"></span></button>{{/link-to}}
         {{#link-to 'pantry' tagName="li"}}<button class="btn btn-default navbar-btn pantry-link">My Pantry<span class="glyphicon glyphicon-home"></span></button>{{/link-to}}
+        {{#if session.isAuthenticated}}
+          <a {{action 'invalidateSession'}}>Logout</a>
+        {{else}}
+          Login
+        {{/if}}
       </ul>
     </div>
   </div>

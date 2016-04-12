@@ -39,6 +39,7 @@
     "ember-load-initializers": "^0.5.1",
     "ember-moment": "6.1.0",
     "ember-resolver": "^2.0.3",
+    "ember-simple-auth": "1.1.0-beta.4",
     "emberfire": "1.6.6",
     "emberx-select": "2.1.1",
     "loader.js": "^4.0.1"
