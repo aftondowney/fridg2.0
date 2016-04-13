@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import moment from 'moment';
 
 export default Ember.Component.extend({
 
@@ -12,16 +11,7 @@ export default Ember.Component.extend({
     updateItemForm() {
       this.set('updateItemForm', true);
     },
-    update(item) {
-      var params = {
-        name: this.get('name'),
-        quantity: this.get('city'),
-        notes: this.get('notes'),
-        date: this.get('date'),
-        exp: this.get('exp'),
-        category: this.get('category')
-      };
-      this.set('updateItemForm', false);
+    update(item, params) {
       this.sendAction('update', item, params);
     },
     sendTo(item, params) {

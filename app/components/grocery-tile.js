@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  sortBy: ['date:desc'],
+  sortBy: ['name'],
   sortedItems: Ember.computed.sort('item', 'sortBy'),
 
 

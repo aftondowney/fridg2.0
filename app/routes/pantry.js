@@ -8,9 +8,6 @@ export default Ember.Route.extend({
     });
   },
 
-  sortBy: ['date:asc'],
-  sortedItems: Ember.computed.sort('item', 'sortBy'),
-
   actions: {
     sendTo(item, params) {
       Object.keys(params).forEach(function(key) {

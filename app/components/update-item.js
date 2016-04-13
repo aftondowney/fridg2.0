@@ -14,7 +14,6 @@ export default Ember.Component.extend({
         notes: this.get('notes'),
         date: this.get('date'),
         exp: this.get('exp'),
-        category: this.get('category')
       };
       this.set('updateItemForm', false);
       this.sendAction('update', item, params);
