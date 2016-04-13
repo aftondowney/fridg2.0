@@ -11,10 +11,10 @@ export function dateColor(params/*, hash*/) {
   console.log('expDate', expDate);
   console.log('expWeek', expWeek);
 
-  if (now >= expDate) {
-    return Ember.String.htmlSafe('<h1>THREE DAYS OLD</h1>');
-  } else if (now >= expWeek) {
+  if (parseInt(now) >= parseInt(expWeek)) {
     return Ember.String.htmlSafe('<h1>SEVEN DAYS OLD</h1>');
+  } else if (parseInt(now) >= parseInt(expDate)) {
+    return Ember.String.htmlSafe('<h1>THREE DAYS OLD</h1>');
   }
 }
 
