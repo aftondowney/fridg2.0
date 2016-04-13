@@ -3,18 +3,18 @@ import moment from 'moment';
 
 export function dateColor(params/*, hash*/) {
   var date = params[0].get('date');
-  var now = moment().format('MM D YYYY, hh:mm a');
+  var now = moment().format('DD MMMM YYYY, hh:mm a');
   var expDate = params[0].get('exp');
   var expWeek = params[0].get('expWeek');
   console.log('date', date);
-  console.log('now', now);
-  console.log('expDate', expDate);
-  console.log('expWeek', expWeek);
+  console.log('now', parseInt(now));
+  console.log('expDate', parseInt(expDate));
+  console.log('expWeek', parseInt(expWeek));
 
-  if (parseInt(now) >= parseInt(expWeek)) {
-    return Ember.String.htmlSafe('<h1>SEVEN DAYS OLD</h1>');
-  } else if (parseInt(now) >= parseInt(expDate)) {
-    return Ember.String.htmlSafe('<h1>THREE DAYS OLD</h1>');
+  if (moment(date).isAfter(expWeek)) {
+    return Ember.String.htmlSafe('<h1><font color="red">SEVEN DAYS OLD</h1>');
+  } else if (moment(now).isAfter(expDate)) {
+    return Ember.String.htmlSafe('<h1><font color="yellow">THREE DAYS OLD</h1>');
   }
 }
 

@@ -21,9 +21,9 @@ export default Ember.Component.extend({
     },
     sendTo(item) {
       var params = {
-        date: this.get('date')? this.get('date') : moment().format('MM D YYYY, hh:mm a'),
-        exp: this.get('date') ? this.get('date') : moment().add(3,'days').format('MM D YYYY, hh:mm a'),
-        expWeek: this.get('date') ? this.get('date') : moment().add(7,'days').format('MM D YYYY, hh:mm a'),
+        date: this.get('date')? this.get('date') : moment().format('DD MMMM YYYY, hh:mm a'),
+        exp: this.get('date') ? this.get('date') : moment().add(3,'days').format('DD MMMM YYYY, hh:mm a'),
+        expWeek: this.get('date') ? this.get('date') : moment().add(7,'days').format('DD MMMM YYYY, hh:mm a'),
         category: this.get('category')
       };
       this.sendAction('sendTo', item, params);
