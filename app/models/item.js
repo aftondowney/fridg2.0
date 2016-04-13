@@ -5,5 +5,6 @@ export default DS.Model.extend({
   quantity: DS.attr(),
   notes: DS.attr(),
   date: DS.attr(),
+  exp: DS.attr(),
   category: DS.attr()
 });
