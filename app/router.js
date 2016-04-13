@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('grocery');
   this.route('pantry');
   this.route('number', {path: '/results/:number'});
+  this.route('login');
+  this.route('signup');
 });
 
 export default Router;
