@@ -6,5 +6,6 @@ export default DS.Model.extend({
   notes: DS.attr(),
   date: DS.attr(),
   exp: DS.attr(),
+  expWeek: DS.attr(),
   category: DS.attr()
 });
