@@ -2,14 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(params) {
-    var url = 'http://api.nal.usda.gov/ndb/reports/?nutrients=208&ndbno=' + params.number + '&type=f&format=json&api_key=1JVOH21MhirKVtA1rmgjCFBpVyjHMV5U4mR1FGiO';
+    var url = 'http://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=1JVOH21MhirKVtA1rmgjCFBpVyjHMV5U4mR1FGiO&nutrients=205&ndbno=' + params.number + '&nutrients=204&nutrients=208&nutrients=269';
     return Ember.$.getJSON(url).then(function(responseJSON) {
-      return responseJSON.report.food.nutrients;
+      console.log(responseJSON.report.foods);
+      return responseJSON.report.foods;
     }).fail(function(){
               console.log("error");
     });
   }
 });
+
+
+
+
 
 
 

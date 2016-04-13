@@ -1,7 +1,8 @@
 <ul>
   {{#each model as |number|}}
-    <li>{{number.nutrient_id}}
-    </li>
-
+    Name:  {{number.name}} <br> Measurement: {{number.measure}} <br>
+      {{#each number.nutrients as |nutrient|}}
+        {{nutrient.nutrient}}: {{nutrient.value}} {{nutrient.unit}} <br>
+      {{/each}}
   {{/each}}
 </ul>
