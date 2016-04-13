@@ -1,6 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  beforeModel: function() {
+    console.log(this.get('session'));
+    if(!this.get('session.isAuthenticated')) {
+      alert('Please Login to view.')
+      this.transitionTo('application');
+    }
+  },
   model: function() {
     return this.store.query('item', {
       orderBy: 'category',

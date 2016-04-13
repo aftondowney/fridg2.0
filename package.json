@@ -41,7 +41,8 @@
     "ember-resolver": "^2.0.3",
     "emberfire": "1.6.6",
     "emberx-select": "2.1.1",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "torii": "0.6.1"
   },
   "dependencies": {
     "ember-radio-buttons": "^4.0.1"
