@@ -1,5 +1,5 @@
 <ul>
   {{#each model as |food|}}
-    <li> {{food.name}}</li>
+    <li> {{#link-to 'number' food.ndbno}} {{food.ndbno}} --{{food.name}}{{/link-to}}</li>
   {{/each}}
 </ul>

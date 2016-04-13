@@ -6,6 +6,9 @@ export default Ember.Route.extend({
     foodLookup(params) {
       this.transitionTo('results', params.food);
     },
+    numberLookup(params) {
+      this.transitionTo('number', params.number);
+    },
     save(params) {
       var newItem = this.store.createRecord('item', params);
       newItem.save();
@@ -14,6 +17,5 @@ export default Ember.Route.extend({
   },
   model() {
     return this.store.findAll('item');
-  },
-
+  }
 });
