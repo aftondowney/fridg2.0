@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     showItemForm() {
       this.set('newItem', true);
     },
+    hideItemForm() {
+      this.set('newItem', false);
+    },
     save() {
       var params = {
         name: this.get('name'),
@@ -23,5 +26,5 @@ export default Ember.Component.extend({
       this.set('newItem', false);
       this.sendAction('save', params);
     }
-  },
+  }
 });

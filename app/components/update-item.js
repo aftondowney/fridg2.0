@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     updateItemForm() {
       this.set('updateItemForm', true);
     },
+    hideItemForm() {
+      this.set('updateItemForm', false);
+    },
     update(item) {
       var params = {
         name: this.get('name'),

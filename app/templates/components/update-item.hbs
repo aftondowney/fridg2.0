@@ -22,13 +22,15 @@
         {{#x-option value='dairy'}}<span>Dairy</span>{{/x-option}}
         {{/x-select}}
       </div>
-      
+
       <div class="form-group">
         <label for="notes">Notes</label>
         {{textarea value=item.notes id="notes" placeholder=item.notes}}
       </div>
 
       <button {{action 'update' item}}>Update</button>
+      <button {{action 'hideItemForm'}}>Cancel</button>
+
     </form>
   </div>
 {{else}}
