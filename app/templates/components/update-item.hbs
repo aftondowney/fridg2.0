@@ -26,6 +26,7 @@
     {{#x-select value=category}}
     {{#x-option value='grocery'}}<span>Add to Grocery List</span>{{/x-option}}
     {{#x-option value='pantry'}}<span>Add to Pantry List</span>{{/x-option}}
+    {{#x-option value='all'}}<span>Remove</span>{{/x-option}}
     {{/x-select}}
   </div>
 <button {{action 'sendTo' item}}>Submit</button>
