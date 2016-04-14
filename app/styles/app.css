@@ -11,7 +11,7 @@
 .brand-image {
   height: 80px;
 }
-.brand-name a:link, a:visited, a:hover, a:active{
+.brand-name a:link, .brand-name a:visited, .brand-name a:hover, .brand-name a:active {
   padding-top: 10px;
   margin-top: 5px;
   font-size: 50px;
