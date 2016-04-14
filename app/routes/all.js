@@ -28,5 +28,8 @@ export default Ember.Route.extend({
       item.destroyRecord();
       this.transitionTo('all');
     },
+    itemLookup(groceryName) {
+      this.transitionTo('item', groceryName);
+    }
   }
 });
