@@ -21,6 +21,9 @@ export default Ember.Component.extend({
       if(confirm("Are you sure you won't want this again?")) {
         this.sendAction('destroyItem', item);
       }
+    },
+    itemLookup(groceryName) {
+      this.sendAction('itemLookup', groceryName);
     }
-      }
+  }
 });

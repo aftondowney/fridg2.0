@@ -12,7 +12,10 @@ export default Ember.Route.extend({
       var newItem = this.store.createRecord('item', params);
       newItem.save();
       this.transitionTo('index');
-    }
+    },
+    itemLookup(params) {
+      this.transitionTo('item', params.item);
+    },
   },
   model() {
     return this.store.findAll('item');
