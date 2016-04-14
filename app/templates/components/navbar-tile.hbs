@@ -6,13 +6,15 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><p class="brand-name">Fridg2.0</p></li>
+        <li><p class="brand-name">{{#link-to 'index'}}Fridg2.0{{/link-to}}</p></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#link-to 'all' tagName="li"}}<button class="btn btn-default navbar-btn grocery-link">All Items<span class="glyphicon glyphicon-apple"></span></button>{{/link-to}}
-        {{#link-to 'grocery' tagName="li"}}<button class="btn btn-default navbar-btn grocery-link">Grocery List<span class="glyphicon glyphicon-shopping-cart"></span></button>{{/link-to}}
-        {{#link-to 'pantry' tagName="li"}}<button class="btn btn-default navbar-btn pantry-link">My Pantry<span class="glyphicon glyphicon-home"></span></button>{{/link-to}}
+        {{#link-to 'grocery' tagName="li"}}<button {{action "toggleGrocery"}} class="btn btn-default navbar-btn grocery-link">Grocery List<span class="glyphicon glyphicon-shopping-cart"></span></button>{{/link-to}}
+        {{#link-to 'pantry' tagName="li"}}<button {{action "togglePantry"}} class="btn btn-default navbar-btn pantry-link">My Pantry<span class="glyphicon glyphicon-home"></span></button>{{/link-to}}
       </ul>
     </div>
   </div>
 </nav>
+<div class="jumbotron" id="jumboBackground">
+</div>

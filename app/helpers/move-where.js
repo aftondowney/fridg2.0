@@ -5,9 +5,11 @@ export function moveWhere(params/*, hash*/) {
   console.log(category);
 
   if(category === 'grocery') {
-    return Ember.String.htmlSafe('<h1>Added to Grocery List</h1>');
+    return Ember.String.htmlSafe('<h5>(On Grocery List)</h5>');
   } else if(category === 'pantry') {
-    return Ember.String.htmlSafe('<h1>Added to Pantry List</h1>');
+    return Ember.String.htmlSafe('<h5>(On Pantry List)</h5>');
+  } else if(category === 'all') {
+    return Ember.String.htmlSafe('<h5>(Not on List)</h5>');
   }
 }
 

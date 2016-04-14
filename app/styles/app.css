@@ -7,14 +7,34 @@
   background-size: cover;
 }
 
+.grocerytron {
+  margin-top: 80px;
+  height: 300px;
+  background-image: url(/assets/images/grocerycart.jpg);
+  background-position: middle;
+  background-size: cover;
+}
+
+.pantrytron {
+  margin-top: 80px;
+  height: 300px;
+  background-image: url(/assets/images/spicecabinet.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+
 /*navbar-tile*/
 .brand-image {
   height: 80px;
 }
-.brand-name {
+.brand-name a:link, .brand-name a:visited, .brand-name a:hover, .brand-name a:active {
   padding-top: 10px;
-  font-size: 40px;
+  margin-top: 5px;
+  font-size: 50px;
+  text-decoration: none;
+  color: #333;
 }
+
 .pantry-link {
   margin-top: 20px;
   margin-right: 30px;
