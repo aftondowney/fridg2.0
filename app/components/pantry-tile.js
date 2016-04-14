@@ -13,5 +13,8 @@ export default Ember.Component.extend({
   sendTo(item, params) {
     this.sendAction('sendTo', item, params);
   },
+  itemLookup(groceryName) {
+    this.sendAction('itemLookup', groceryName);
+  }
 }
 });
