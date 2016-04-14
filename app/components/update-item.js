@@ -14,15 +14,15 @@ export default Ember.Component.extend({
         notes: this.get('notes'),
         date: this.get('date'),
         exp: this.get('exp'),
-        category: this.get('category')
       };
       this.set('updateItemForm', false);
       this.sendAction('update', item, params);
     },
     sendTo(item) {
       var params = {
-        date: this.get('date')? this.get('date') : moment().format('MMMM Do YYYY, hh:mm a'),
-        exp: this.get('date') ? this.get('date') : moment().add(3,'days').format('MMMM Do YYYY, hh:mm a'),
+        date: this.get('date')? this.get('date') : moment().format('DD MMMM YYYY, hh:mm a'),
+        exp: this.get('date') ? this.get('date') : moment().add(3,'days').format('DD MMMM YYYY, hh:mm a'),
+        expWeek: this.get('date') ? this.get('date') : moment().add(7,'days').format('DD MMMM YYYY, hh:mm a'),
         category: this.get('category')
       };
       this.sendAction('sendTo', item, params);
