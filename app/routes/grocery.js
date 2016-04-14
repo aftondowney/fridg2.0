@@ -26,5 +26,8 @@ export default Ember.Route.extend({
       item.save();
       this.transitionTo('grocery');
     },
+    itemLookup(groceryName) {
+      this.transitionTo('item', groceryName);
+    }
   }
 });
