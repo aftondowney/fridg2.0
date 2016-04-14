@@ -14,6 +14,7 @@ export default Ember.Component.extend({
         notes: this.get('notes'),
         date: this.get('date'),
         exp: this.get('exp'),
+        type: this.get('type'),
       };
       this.set('updateItemForm', false);
       this.sendAction('update', item, params);
@@ -21,8 +22,10 @@ export default Ember.Component.extend({
     sendTo(item) {
       var params = {
         date: this.get('date')? this.get('date') : moment().format('DD MMMM YYYY, hh:mm a'),
+        warnMeat: this.get('date') ? this.get('date') : moment().add(1, 'day').format('DD MMMM YYYY, hh:mm a'),
         exp: this.get('date') ? this.get('date') : moment().add(3,'days').format('DD MMMM YYYY, hh:mm a'),
         expWeek: this.get('date') ? this.get('date') : moment().add(7,'days').format('DD MMMM YYYY, hh:mm a'),
+        expTwoWeeks: this.get('date') ? this.get('date') : moment().add(14,'days').format('DD MMMM YYYY, hh:mm a'),
         category: this.get('category')
       };
       this.sendAction('sendTo', item, params);

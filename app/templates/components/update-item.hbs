@@ -13,6 +13,17 @@
       </div>
 
       <div class="form-group">
+        <label for="type">Food Group</label>
+        {{#x-select value=category}}
+        {{#x-option value='meat'}}<span>Meat</span>{{/x-option}}
+        {{#x-option value='produce'}}<span>Produce</span>{{/x-option}}
+        {{#x-option value='dry'}}<span>Dry Goods</span>{{/x-option}}
+        {{#x-option value='frozen'}}<span>Frozen</span>{{/x-option}}
+        {{#x-option value='dairy'}}<span>Dairy</span>{{/x-option}}
+        {{/x-select}}
+      </div>
+      
+      <div class="form-group">
         <label for="notes">Notes</label>
         {{textarea value=item.notes id="notes" placeholder=item.notes}}
       </div>
