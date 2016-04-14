@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('pantry');
   this.route('all');
   this.route('number', {path: '/results/:number'});
+  this.route('item', {path: '/results/:groceryName'});
 });
 
 export default Router;

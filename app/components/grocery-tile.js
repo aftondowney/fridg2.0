@@ -7,11 +7,17 @@ export default Ember.Component.extend({
 
 
   actions: {
-  update(item, params) {
-    this.sendAction('update', item, params);
-  },
-  sendTo(item, params) {
-    this.sendAction('sendTo', item, params);
-  },
-}
+    update(item, params) {
+      this.sendAction('update', item, params);
+    },
+    sendTo(item, params) {
+      this.sendAction('sendTo', item, params);
+    },
+    itemLookup(groceryName) {
+      // var params = {
+      //   item: this.get('item')
+      // };
+      this.sendAction('itemLookup', groceryName);
+    }
+  }
 });
