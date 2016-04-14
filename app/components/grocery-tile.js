@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  sortBy: ['name'],
+  sortBy: ['type'],
   sortedItems: Ember.computed.sort('item', 'sortBy'),
 
 
