@@ -9,13 +9,7 @@ export function dateColor(params/*, hash*/) {
   var expDate = params[0].get('exp');
   var expWeek = params[0].get('expWeek');
   var expTwoWeeks = params[0].get('expTwoWeeks');
-  console.log('type', type);
-  console.log('now', parseInt(now));
-  console.log('date', date);
-  console.log('warnMeat', warnMeat);
-  console.log('expDate', parseInt(expDate));
-  console.log('expWeek', parseInt(expWeek));
-  console.log('expTwoWeeks', expTwoWeeks);
+
 
 if(type === 'produce') {
   if (moment(date).isAfter(expWeek)) {
