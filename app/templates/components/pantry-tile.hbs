@@ -1,21 +1,17 @@
 {{#each sortedItems as |item|}}
-<h3>{{item.name}}</h3> x {{item.quantity}}<br>
+<h3{{action 'itemLookup' item.name}}> {{#link-to 'item' item.name}} {{item.name}} {{/link-to}} </h3> x {{item.quantity}}<br>
 <h4>Bought on:</h4>{{date-color item}}{{item.date}} ({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}})<br>
 {{#if (eq item.type 'meat')}}
-One Day Old: {{item.warnMeat}}<br>
-Three Days Old {{item.exp}}<br>
+  One Day Old: {{item.warnMeat}}<br>
+  Three Days Old {{item.exp}}<br>
 {{else if (eq item.type 'produce')}}
-Three Days Old: {{item.exp}}<br>
-One Week Old: {{item.expWeek}}<br>
+  Three Days Old: {{item.exp}}<br>
+  One Week Old: {{item.expWeek}}<br>
 {{else if (eq item.type 'dairy')}}
-One Week Old: {{item.expWeek}}<br>
-Two Weeks Old: {{item.expTwoWeeks}}
+  One Week Old: {{item.expWeek}}<br>
+  Two Weeks Old: {{item.expTwoWeeks}}
 {{/if}}
 
-<h3{{action 'itemLookup' item.name}}> {{#link-to 'item' item.name}} {{item.name}} {{/link-to}} </h3> x {{item.quantity}}<br>
-<h4>Bought on:</h4>{{date-color item}}(date){{item.date}} ({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}})<br>
-3 days: (exp) {{item.exp}}<br>
-7 days: (expWeek) {{item.expWeek}}
 
 <h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
 {{/each}}
