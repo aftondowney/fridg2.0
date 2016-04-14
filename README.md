@@ -15,9 +15,9 @@ If you are curious about the nutritional value of your food, you can search for 
 * _This project was built on [Ember](https://emberjs.com) and was written in [JavaScript](https://en.wikipedia.org/wiki/JavaScript)._
 * _Dependencies were handled with [npm](https://www.npmjs.com/) and [Bower](http://bower.io/)._
 * _Speaking of dependencies, we used a ton of them to supplement Ember. Of note were:
-1. [EmberX Select](https://github.com/thefrontside/emberx-select)
-2. [Ember Truth Helpers](https://github.com/jmurphyau/ember-truth-helpers)
-3. [Ember Moment](https://github.com/stefanpenner/ember-moment)
+  1. [EmberX Select](https://github.com/thefrontside/emberx-select)
+  2. [Ember Truth Helpers](https://github.com/jmurphyau/ember-truth-helpers)
+  3. [Ember Moment](https://github.com/stefanpenner/ember-moment)
 * _[Bootstrap](http://getbootstrap.com/) built the basic CSS seen on the page, with minimal alteration by us._
 * _We used the [USDA National Nutrient Database (NDB) API](https://ndb.nal.usda.gov/ndb/api/doc) to perform our nutritional information searches.
 * _[Github](https://www.github.com) is a great place to host any code you're working on or wish to share with the world._
