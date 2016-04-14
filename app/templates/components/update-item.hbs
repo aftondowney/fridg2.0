@@ -20,6 +20,7 @@
         {{#x-option value='dry'}}<span>Dry Goods</span>{{/x-option}}
         {{#x-option value='frozen'}}<span>Frozen</span>{{/x-option}}
         {{#x-option value='dairy'}}<span>Dairy</span>{{/x-option}}
+        {{#x-option value='hate'}}<span>I hated this! (ノಠ益ಠ)ノ彡┻━┻</span>{{/x-option}}
         {{/x-select}}
       </div>
 
@@ -28,13 +29,13 @@
         {{textarea value=item.notes id="notes" placeholder=item.notes}}
       </div>
 
-      <button {{action 'update' item}}>Update</button>
-      <button {{action 'hideItemForm'}}>Cancel</button>
+      <button class='btn btn-sm btn-success'{{action 'update' item}}>Update</button>
+      <button class='btn btn-sm btn-danger'{{action 'hideItemForm'}}>Cancel</button>
 
     </form>
   </div>
 {{else}}
-  <button {{action 'updateItemForm'}}>Update</button>
+  <button class='btn btn-sm btn-success'{{action 'updateItemForm'}}>Update</button>
   <div class="form-group">
     {{#x-select value=category}}
     {{#x-option value='grocery'}}<span>Add to Grocery List</span>{{/x-option}}
@@ -42,5 +43,5 @@
     {{#x-option value='all'}}<span>Remove</span>{{/x-option}}
     {{/x-select}}
   </div>
-<button {{action 'sendTo' item}}>Submit</button>
-  {{/if}}
+<button class='btn btn-sm btn-success' {{action 'sendTo' item}}>Submit</button>
+{{/if}}
