@@ -2,10 +2,10 @@ import Ember from 'ember';
 import moment from 'moment';
 
 export default Ember.Component.extend({
-  newItem: false,
+  newSearchedItem: false,
   actions: {
     showItemForm() {
-      this.set('newItem', true);
+      this.set('newSearchedItem', true);
     },
     save() {
       var params = {
@@ -16,8 +16,9 @@ export default Ember.Component.extend({
         notes: this.get('notes') ? this.get('notes') : '',
         category: this.get('category'),
       };
-      this.set('newItem', false);
-      this.sendAction('save', params);
+      console.log(params);
+      this.set('newSearchedItem', false);
+      this.sendAction('saveSearched', params);
     }
   },
 });
