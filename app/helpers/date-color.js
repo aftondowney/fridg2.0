@@ -12,21 +12,21 @@ export function dateColor(params/*, hash*/) {
 
 
 if(type === 'produce') {
-  if (moment(date).isAfter(expWeek)) {
+  if (moment(now).isAfter(expWeek)) {
     return Ember.String.htmlSafe('<h1><font color="red">SEVEN DAYS OLD</h1>');
   } else if (moment(now).isAfter(expDate)) {
     return Ember.String.htmlSafe('<h1><font color="yellow">THREE DAYS OLD</h1>');
   }
 } else if(type === 'meat') {
-  if(moment(date).isAfter(expDate)) {
+  if(moment(now).isAfter(expDate)) {
     return Ember.String.htmlSafe('<h1><font color="red">THREE DAYS OLD</h1>');
-  } else if(moment(date).isAfter(warnMeat)) {
+  } else if(moment(now).isAfter(warnMeat)) {
     return Ember.String.htmlSafe('<h1><font color="yellow"> ONE DAY OLD</h1>');
   }
 } else if(type === 'dairy') {
-  if(moment(date).isAfter(expTwoWeeks)) {
+  if(moment(now).isAfter(expTwoWeeks)) {
     return Ember.String.htmlSafe('<h1><font color="red">TWO WEEKS OLD</h1>');
-  } else if(moment(date).isAfter(expWeek)) {
+  } else if(moment(now).isAfter(expWeek)) {
     return Ember.String.htmlSafe('<h1><font color="yellow">ONE WEEK OLD</h1>');
   }
 } else {
