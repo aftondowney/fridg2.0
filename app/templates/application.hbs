@@ -1,9 +1,40 @@
-  {{navbar-tile}}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container=fluid">
+    <div class="navbar-header">
+
+      {{#link-to 'index'}}<img {{action "toggleHome"}} class="navbar-brand brand-image" src="/assets/images/refrigerator.png">{{/link-to}}
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><p {{action "toggleHome"}} class="brand-name">{{#link-to 'index'}}Fridg2.0{{/link-to}}</p></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{#if session.isAuthenticated}}
+        <button class="btn btn-default navbar-btn login-link" {{action 'logout'}}>Logout</button>
+        {{else}}
+        {{#link-to 'login'}}
+        <button class="btn btn-default navbar-btn login-link"> Login </button>
+        {{/link-to}}
+        {{/if}}
+
+        {{#link-to 'all' tagName="li"}}<button class="btn btn-default navbar-btn all-link">All Items <span class="glyphicon glyphicon-apple"></span></button>{{/link-to}}
+
+        {{#link-to 'grocery' tagName="li"}}<button {{action "toggleGrocery"}} class="btn btn-default navbar-btn grocery-link">Grocery List <span class="glyphicon glyphicon-shopping-cart"></span></button>{{/link-to}}
+
+        {{#link-to 'pantry' tagName="li"}}<button {{action "togglePantry"}} class="btn btn-default navbar-btn pantry-link">My Pantry <span class="glyphicon glyphicon-home"></span></button>{{/link-to}}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron" id="jumboBackground">
+</div>
 
 
 
-  <div class="container">
+<div class="container">
   <div class="row">
+
     {{outlet}}
   </div>
   <hr>

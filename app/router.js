@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('all');
   this.route('number', {path: '/results/:number'});
   this.route('item', {path: '/results/:groceryName'});
+  this.route('login');
 });
 
 export default Router;
