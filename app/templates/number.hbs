@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-md-6">
-    <ul>
+    <ol>
       {{#each model as |number|}}
         Name:  {{number.name}} <br> Serving Size: {{number.measure}} <br>
           {{#each number.nutrients as |nutrient|}}
             {{nutrient.nutrient}}: {{nutrient.value}} {{nutrient.unit}} <br>
           {{/each}}
       {{/each}}
-    </ul>
+    </ol>
   </div>
   <div class="col-md-6">
     {{from-search item=item saveSearched='saveSearched'}}

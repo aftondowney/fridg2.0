@@ -1,4 +1,5 @@
 {{#each sortedItems as |item|}}
+<hr>
 <h3{{action 'itemLookup' item.name}}> {{#link-to 'item' item.name}} {{item.name}} {{/link-to}} </h3> x {{item.quantity}}<br>
 <h4>Bought on:</h4>{{date-color item}}{{item.date}} ({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}})<br>
 {{#if (eq item.type 'meat')}}
