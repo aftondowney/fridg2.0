@@ -67,6 +67,12 @@ body{
 .newItemBtn {
   margin-top: 40px;
 }
+.search-label{
+  font-size: 18px;
+}
+input {
+  width: 100%;
+}
 .thumbnail {
   float: left;
   height: 500px;
