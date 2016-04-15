@@ -1,22 +1,25 @@
 
 <div class="row">
   {{#each sortedItems as |item|}}
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <h3{{action 'itemLookup' item.name}}> {{#link-to 'item' item.name}} {{item.name}} {{/link-to}}</h3><h4> x {{item.quantity}}</h4><br>
-        <hr>
-        Bought on: {{item.date}}({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}}){{date-color item}}<br>
-        {{#if (eq item.type 'meat')}}
-        Expires On: {{item.exp}}<br>
-        {{else if (eq item.type 'produce')}}
-        Expires On: {{item.expWeek}}<br>
-        {{else if (eq item.type 'dairy')}}
-        Expires On: {{item.expTwoWeeks}}
-        {{/if}}
-        <h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
-      </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3{{action 'itemLookup' item.name}}> {{#link-to 'item' item.name}} {{item.name}} {{/link-to}}</h3><h4> x {{item.quantity}}</h4><br>
+          <hr>
+          Bought on: {{item.date}}({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}}){{date-color item}}<br>
+          {{#if (eq item.type 'meat')}}
+          Expires On: {{item.exp}}<br>
+          {{else if (eq item.type 'produce')}}
+          Expires On: {{item.expWeek}}<br>
+          {{else if (eq item.type 'dairy')}}
+          Expires On: {{item.expTwoWeeks}}
+          {{/if}}
+          <h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
+  {{/each}}
+    <h4>Bought on:</h4>{{item.date}}({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}}){{date-color item}}
+    <h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
+    </div>
     </div>
   </div>
-  {{/each}}
+{{/each}}
 </div>

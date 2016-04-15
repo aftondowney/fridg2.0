@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       console.log(responseJSON.report.foods);
       return responseJSON.report.foods;
     }).fail(function(){
-        console.log("error");
+        alert("Your search did not return any results");
 
     });
   }

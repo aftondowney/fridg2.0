@@ -1,5 +1,6 @@
-<ul>
+<h3>Result List:</h3>
+<ol class="nutrition-list">
   {{#each model as |food|}}
     <li> {{#link-to 'number' food.ndbno}} {{food.ndbno}} --{{food.name}}{{/link-to}}</li>
   {{/each}}
-</ul>
+</ol>
