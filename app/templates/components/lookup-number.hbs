@@ -1,9 +1,9 @@
-<h1>Number Lookup</h1>
-
+<h1>Search for food by ID</h1>
 <form>
   <div class="form-group">
-    <label for="number">number</label>
+    <label for="number">ID number</label>
     {{input value=number id="number"}}
+    <p><small>For example: cantaloupe: 09181</small></p>
   </div>
 
   <button class="btn btn-primary" {{action 'numberLookup'}}>Submit</button>
