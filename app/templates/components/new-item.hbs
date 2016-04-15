@@ -1,5 +1,5 @@
 {{#if newItem}}
-<h1>Have a Item?</h1>
+<h1>Add new food</h1>
 <div>
   <form>
     <div class="form-group">
@@ -38,10 +38,10 @@
     </div>
 
 
-    <button class='btn btn-sm btn-success'{{action 'save'}}>Save</button>
-    <button class='btn btn-sm btn-danger'{{action 'hideItemForm'}}>Cancel</button>
+    <button class='btn btn-xs update-btn'{{action 'save'}}>Save</button>
+    <button class='btn btn-xs delete-btn'{{action 'hideItemForm'}}>Cancel</button>
   </form>
 </div>
 {{else}}
-<button class="btn btn-sm btn-success newItem" {{action 'showItemForm'}}>New Item</button>
+<button class="btn btn-sm delete-btn newItem" {{action 'showItemForm'}}>Add food to list?</button>
 {{/if}}

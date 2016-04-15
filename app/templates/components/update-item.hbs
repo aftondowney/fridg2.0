@@ -29,13 +29,14 @@
         {{textarea value=item.notes id="notes" placeholder=item.notes}}
       </div>
 
-      <button class='btn btn-sm btn-success'{{action 'update' item}}>Update</button>
-      <button class='btn btn-sm btn-danger'{{action 'hideItemForm'}}>Cancel</button>
+      <button class='btn btn-xs update-btn'{{action 'update' item}}>Update</button>
+      <button class='btn btn-xs cancel-btn'{{action 'hideItemForm'}}>Cancel</button>
 
     </form>
   </div>
 {{else}}
-  <button class='btn btn-sm btn-success'{{action 'updateItemForm'}}>Update</button>
+<div class="updateBtn">
+  <button class='btn btn-xs update-btn'{{action 'updateItemForm'}}>Update</button>
   <div class="form-group">
     {{#x-select value=category}}
     {{#x-option value='grocery'}}<span>Add to Grocery List</span>{{/x-option}}
@@ -43,5 +44,6 @@
     {{#x-option value='all'}}<span>Remove</span>{{/x-option}}
     {{/x-select}}
   </div>
-<button class='btn btn-sm btn-success' {{action 'sendTo' item}}>Submit</button>
+<button class='btn btn-xs submit-btn' {{action 'sendTo' item}}>Submit</button>
+</div>
 {{/if}}

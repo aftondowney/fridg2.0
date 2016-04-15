@@ -1,17 +1,15 @@
+
+<div class="row">
 {{#each sortedItems as |item|}}
-<h3{{action 'itemLookup' item.name}}> {{#link-to 'item' item.name}} {{item.name}} {{/link-to}} </h3> x {{item.quantity}}<br>
-<h4>Bought on:</h4>{{date-color item}}{{item.date}} ({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}})<br>
-{{#if (eq item.type 'meat')}}
-  One Day Old: {{item.warnMeat}}<br>
-  Three Days Old {{item.exp}}<br>
-{{else if (eq item.type 'produce')}}
-  Three Days Old: {{item.exp}}<br>
-  One Week Old: {{item.expWeek}}<br>
-{{else if (eq item.type 'dairy')}}
-  One Week Old: {{item.expWeek}}<br>
-  Two Weeks Old: {{item.expTwoWeeks}}
-{{/if}}
-
-
-<h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3{{action 'itemLookup' item.name}}> {{#link-to 'item' item.name}} {{item.name}} {{/link-to}}</h3><h4> x {{item.quantity}}</h4><br>
+        <hr>
+        <h4>Bought on:</h4>{{item.date}}({{moment-from-now item.date 'DD MMMM YYYY, h:mm a' id='buyDate'}}){{date-color item}}
+        <h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
+        </div>
+    </div>
+  </div>
 {{/each}}
+</div>

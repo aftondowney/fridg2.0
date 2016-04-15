@@ -1,4 +1,9 @@
-{{lookup-form foodLookup="foodLookup"}}
-{{lookup-number numberLookup="numberLookup"}}
-
-{{new-item item=model save='save'}}
+<div class="col-sm-6">
+  {{lookup-form foodLookup="foodLookup"}}
+</div>
+<div class="col-sm-6">
+  {{lookup-number numberLookup="numberLookup"}}
+  <div class="newItemBtn">
+    {{new-item item=model save='save'}}
+  </div>
+</div>
