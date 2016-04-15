@@ -1,6 +1,13 @@
+<div class="row">
 {{#each sortedItems as |item|}}
-<hr>
-<h3{{action 'itemLookup' item.name}}>{{#link-to 'item' item.name}} {{item.name}} {{/link-to}}</h3> x {{item.quantity}}<br>
-<h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
-<button class='btn btn-sm btn-danger'{{action 'delete' item}}>Delete Item?</button>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3{{action 'itemLookup' item.name}}>{{#link-to 'item' item.name}} {{item.name}} {{/link-to}}</h3> x {{item.quantity}}<br>
+        <h4>Notes:</h4> {{item.notes}}{{update-item item=item update='update' sendTo='sendTo'}}
+        <button class='btn btn-sm btn-danger'{{action 'delete' item}}>Delete Item?</button>
+      </div>
+    </div>
+  </div>
 {{/each}}
+</div>

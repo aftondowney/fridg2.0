@@ -35,6 +35,7 @@
     </form>
   </div>
 {{else}}
+<div class="updateBtn">
   <button class='btn btn-sm btn-success'{{action 'updateItemForm'}}>Update</button>
   <div class="form-group">
     {{#x-select value=category}}
@@ -44,4 +45,5 @@
     {{/x-select}}
   </div>
 <button class='btn btn-sm btn-success' {{action 'sendTo' item}}>Submit</button>
+</div>
 {{/if}}
