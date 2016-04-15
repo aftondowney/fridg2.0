@@ -3,7 +3,6 @@ import moment from 'moment';
 
 export function dateColor(params/*, hash*/) {
   var type = params[0].get('type');
-  var date = params[0].get('date');
   var now = moment().format('DD MMMM YYYY, hh:mm a');
   var warnMeat = params[0].get('warnMeat');
   var expDate = params[0].get('exp');
