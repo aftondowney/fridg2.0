@@ -11,4 +11,5 @@ export default DS.Model.extend({
   category: DS.attr(),
   warnMeat: DS.attr(),
   type: DS.attr(),
+  user: DS.belongsTo('user', {async: true})
 });
