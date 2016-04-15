@@ -8,7 +8,7 @@ export default Ember.Route.extend({
       console.log(responseJSON.list.item);
       return responseJSON.list.item;
     }).fail(function(){
-        // console.log(params);
+       alert("Your search did not return any results");
 
     });
   }
